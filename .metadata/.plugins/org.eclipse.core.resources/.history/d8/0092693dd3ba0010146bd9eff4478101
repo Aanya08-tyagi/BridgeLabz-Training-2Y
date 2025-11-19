@@ -1,0 +1,19 @@
+package colloection;
+
+import java.util.LinkedList;
+
+public class Frameworks {
+    public static void main(String[] args) {
+        LinkedList<Integer> list = new LinkedList<>();
+
+        list.add(10);
+        list.add(20);
+        list.addFirst(5);
+        list.addLast(30);
+        Object E = null;
+        System.out.println(list);
+        list.addFirst((Integer) E);
+       
+        System.out.println(list);
+    }
+}

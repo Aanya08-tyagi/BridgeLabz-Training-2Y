@@ -1,0 +1,21 @@
+package com.tech.gla;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException; 
+import java.sql.Statement;
+
+public class student {
+	public static void main(String args[]) throws SQLException, ClassNotFoundException {
+ String url ="jdbc.mysql://local  host:3306/gla";
+ String user ="root" ; 
+ String pass="root";
+  
+ Class.forName("com.sql.cj.jdbc.Driver");
+ Connection connect = DriverManager.getConnection(url,user,pass);
+ Statement stmt = connect.createStatement();
+ String Table ="Create table.Student(id int , nameVarchar(50),age int , marks int)";
+ System.out.println("Table Created Sucessfully");
+ stmt.execute(Table);
+	}
+}
